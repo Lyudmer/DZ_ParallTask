@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleInput.cs" />
     <Compile Include="Hendlers\IHandler.cs" />
     <Compile Include="Hendlers\TaskItem.cs" />
     <Compile Include="Hendlers\TasksHandler.cs" />
+    <Compile Include="IInputVal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

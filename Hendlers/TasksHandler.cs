@@ -18,6 +18,7 @@ namespace DZ_ParallTask
         {
             Files = files;
             CFiles = cFiles;
+            
         }
 
         public string[] Files { get; }
@@ -41,7 +42,7 @@ namespace DZ_ParallTask
         private void StartAsTasks()
         {
             string[] files;
-            if (CFiles!= Files.Count())
+            if (CFiles > 0)
             {
                 files = new string[CFiles];
                 Array.Copy(Files, 0, files, 0, CFiles);
@@ -93,9 +94,11 @@ namespace DZ_ParallTask
             {
                 var line = await stream.ReadLineAsync();
                 if (line != null)
+                {
                     spacesCount += line.Count(c => c == ' ');
-                
+                }
             }
+
             return spacesCount;
         }
 
